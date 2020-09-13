@@ -15,12 +15,8 @@ public class IceCream {
      * @param args command line arguments (unused)
      */
     public static void main(String[] args) {
-        Flavour cone1;
-        Flavour cone2;
-        Flavour cone3;
-
-        cone1 = Flavour.rockyRoad;
-        cone2 = Flavour.chocolate;
+        Flavour cone1 = Flavour.rockyRoad;
+        Flavour cone2 = Flavour.chocolate;
 
         System.out.println("cone1 value: " + cone1  );
         System.out.println("cone1 ordinal: " + cone1.ordinal());
@@ -31,7 +27,7 @@ public class IceCream {
         System.out.println("cone2 ordinal: " + cone2.ordinal());
         System.out.println("cone2 ca.bcit.comp2522.code.name: " + cone2.name());
 
-        cone3 = cone1;
+        Flavour cone3 = cone1;
 
         System.out.println();
         System.out.println("cone3 value: " + cone3);
@@ -42,7 +38,7 @@ public class IceCream {
     /**
      * Enumeration type representing some flavours of ice cream.
      */
-    enum Flavour {
+    private enum Flavour {
         /**
          * plain vanilla flavour.
          */

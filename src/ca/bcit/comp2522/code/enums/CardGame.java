@@ -23,6 +23,7 @@ public class CardGame {
     public enum Suit {
         HEARTS, DIAMONDS, SPADES, CLUBS
     }
+
     /**
      * Runs the program.
      *

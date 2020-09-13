@@ -18,7 +18,7 @@ public class FunWithStrings {
     public static void main(String[] args) {
 
         final Scanner titleScanner = new Scanner(System.in);
-        System.out.print("Enter the ca.bcit.comp2522.code.name of your favourite book: ");
+        System.out.print("Enter the name of your favourite book: ");
 
         final String userInput = titleScanner.nextLine();
         // userInput = titleScanner.next();

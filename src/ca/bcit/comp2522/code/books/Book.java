@@ -34,11 +34,16 @@ public class Book {
         this(DEFAULT_AUTHOR, DEFAULT_TITLE, MINIMUM_PAGES);
     }
 
+    public Book(final String author, final String title) {
+        this(author, title, MINIMUM_PAGES);
+    }
+
     /**
      * Constructs an object of type Book.
+     *
      * @param author a String
-     * @param title a String
-     * @param pages a positive int
+     * @param title  a String
+     * @param pages  a positive int
      */
     public Book(final String author, final String title, final int pages) {
         this.author = author;
@@ -52,6 +57,7 @@ public class Book {
 
     /**
      * Returns the number of pages as an int.
+     *
      * @return pages as an int
      */
     public int getPages() {
@@ -60,6 +66,7 @@ public class Book {
 
     /**
      * Returns the author as a String.
+     *
      * @return author as a String
      */
     public String getAuthor() {
@@ -68,6 +75,7 @@ public class Book {
 
     /**
      * Returns the title as a String.
+     *
      * @return title as a String
      */
     public String getTitle() {
@@ -76,6 +84,7 @@ public class Book {
 
     /**
      * Returns a String representation of this object.
+     *
      * @return description as a String.
      */
     @Override

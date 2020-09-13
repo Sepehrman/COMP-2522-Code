@@ -37,7 +37,7 @@ public class IntegerWrapper {
         final String input2 = scanner.next();
 
         System.out.println(input1 + " + " + input2 + " = "
-                + (Integer.parseInt(input1) + Integer.parseInt(input1)));
+                + (Integer.parseInt(input1) + Integer.parseInt(input2))); // Thanks Ralph!
         scanner.close();
     }
 }
