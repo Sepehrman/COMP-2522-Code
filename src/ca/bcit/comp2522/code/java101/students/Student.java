@@ -1,5 +1,7 @@
 package ca.bcit.comp2522.code.java101.students;
 
+import java.util.Objects;
+
 /**
  * Represents a BCIT student.
  *
@@ -32,27 +34,36 @@ public class Student {
         this.schoolAddress = schoolAddress;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Student student = (Student) o;
+
+        if (!firstName.equals(student.firstName)) return false;
+        if (!lastName.equals(student.lastName)) return false;
+        if (!homeAddress.equals(student.homeAddress)) return false;
+        return schoolAddress.equals(student.schoolAddress);
+    }
 
     @Override
     public int hashCode() {
-        int result = firstName != null ? firstName.hashCode() : 0;
-        result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
-        result = 31 * result + (homeAddress != null ? homeAddress.hashCode() : 0);
-        result = 31 * result + (schoolAddress != null ? schoolAddress.hashCode() : 0);
+        int result = firstName.hashCode();
+        result = 31 * result + lastName.hashCode();
+        result = 31 * result + homeAddress.hashCode();
+        result = 31 * result + schoolAddress.hashCode();
         return result;
     }
 
-    /**
-     * Returns a String description of this Student object.
-     *
-     * @return description a String
-     */
+    @Override
     public String toString() {
-        String result;
-        result = firstName + " " + lastName + "\n";
-        result += "Home Address:\n" + homeAddress + "\n";
-        result += "School Address:\n" + schoolAddress;
-        return result;
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", homeAddress=" + homeAddress +
+                ", schoolAddress=" + schoolAddress +
+                '}';
     }
 }
 
