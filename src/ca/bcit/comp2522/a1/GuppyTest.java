@@ -1,5 +1,3 @@
-package ca.bcit.comp2522.a1;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
@@ -22,12 +20,12 @@ import static org.junit.jupiter.api.Assertions.*;
  * 2. Making sure the toString is correct
  * 3. And others.
  *
- * I would like you to ALL collaborate as a cohort and augment
- * this JUnit file with the tests that are missing. Work together
- * to make this JUnit test file complete and include it with your solution.
+ * I invite you to collaborate as a cohort and augment this JUnit
+ * file with the tests that are missing. Work together to make this
+ * JUnit test file complete and include it with your solution.
  *
  * There are 41 tests here. By my reckoning, we are missing enough meaningful
- * tests to bring that closer to 60. What have we forgotten to test?
+ * tests to bring that closer to 50, maybe 60. What have we forgotten to test?
  */
 class GuppyTest {
 
@@ -39,7 +37,7 @@ class GuppyTest {
 
         zeroParamGuppy = new Guppy();
         testGuppy = new Guppy(  "Poecilia",
-                "elegans",
+                "reticulata",
                 1,
                 true,
                 3,
@@ -107,7 +105,7 @@ class GuppyTest {
         final int numberCreated = 100;
         for (int i = 0; i < numberCreated; ++i)
             new Guppy("Poecilia",
-                    "elegans",
+                    "reticulata",
                     1,
                     true,
                     3,
@@ -129,7 +127,7 @@ class GuppyTest {
     @Test
     public void multiParamGuppyIsSetToCorrectValues() {
         assertTrue(testGuppy.getGenus().equals("Poecilia"));
-        assertTrue(testGuppy.getSpecies().equals("elegans"));
+        assertTrue(testGuppy.getSpecies().equals("reticulata"));
         assertEquals(1, testGuppy.getAgeInWeeks());
         assertTrue(testGuppy.getIsFemale());
         assertEquals(3, testGuppy.getGenerationNumber());
@@ -155,7 +153,7 @@ class GuppyTest {
         int numberCreated = 100;
         for (int i = 0; i < numberCreated; ++i) {
             Guppy fry = new Guppy("Poecilia",
-                    "elegans",
+                    "reticulata",
                     1,
                     true,
                     3,
@@ -167,13 +165,13 @@ class GuppyTest {
     @Test
     public void genusAndSpeciesAreCorrectlyFormattedAndStored() {
         Guppy fry = new Guppy("  poECILIA    ",
-                "  ELEgans   ",
+                "  retICUlata   ",
                 1,
                 true,
                 3,
                 0.75);
         assertTrue(fry.getGenus().equals("Poecilia"));
-        assertTrue(fry.getSpecies().equals("elegans"));
+        assertTrue(fry.getSpecies().equals("reticulata"));
     }
 
     @Test
@@ -207,7 +205,7 @@ class GuppyTest {
                 true,
                 0 ,
                 0.5);
-        assertTrue(fry.getSpecies().equals("elegans"));
+        assertTrue(fry.getSpecies().equals("reticulata"));
 
     }
 
@@ -219,7 +217,7 @@ class GuppyTest {
                 true,
                 0 ,
                 0.5);
-        assertTrue(fry.getSpecies().equals("elegans"));
+        assertTrue(fry.getSpecies().equals("reticulata"));
 
     }
 
