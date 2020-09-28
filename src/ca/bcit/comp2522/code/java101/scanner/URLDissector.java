@@ -24,7 +24,8 @@ public class URLDissector {
      * @throws IOException if there is an error reading the file
      */
     public static void main(String[] args) throws IOException {
-        final Scanner fileScan = new Scanner(new File("src/ca/bcit/comp2522/code/scanner/urls.inp"));
+        final Scanner fileScan =
+                new Scanner(new File("src/ca/bcit/comp2522/code/java101/scanner/urls.inp"));
 
         // An approach to reads and process each line of a file
         while (fileScan.hasNext()) {
@@ -45,7 +46,7 @@ public class URLDissector {
         fileScan.close();
 
         // Another approach to reads and process each line of a file
-        Path alternateFileScan = Paths.get("src/ca/bcit/comp2522/code/scanner/urls.inp");
+        Path alternateFileScan = Paths.get("src/ca/bcit/comp2522/code/java101/scanner/urls.inp");
         String contents = Files.readString(alternateFileScan);
         System.out.println(contents);
 

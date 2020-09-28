@@ -11,6 +11,10 @@ package ca.bcit.comp2522.code.inheritance.introToInheritance.books;
 public class Book {
 
     private static final int DEFAULT_PAGES = 1500;
+
+    /**
+     * An average book has this many pages.
+     */
     protected int pages = DEFAULT_PAGES;
 
     /**

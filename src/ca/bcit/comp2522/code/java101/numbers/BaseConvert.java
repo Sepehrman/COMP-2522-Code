@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * BaseConvert.
- * 
+ *
  * @author BCIT
  * @version 2020
  */

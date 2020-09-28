@@ -8,6 +8,9 @@ package ca.bcit.comp2522.code.inheritance.introToInheritance.animalHierarchy;
  */
 public abstract class Animal {
 
+    /**
+     * The age in years.
+     */
     protected int age;
 
     /**

@@ -8,7 +8,7 @@ package ca.bcit.comp2522.code.inheritance.introToInheritance.roads;
  */
 public class Boulevard extends Road {
 
-    private boolean medianHasTrees;
+    private final boolean medianHasTrees;
 
     /**
      * Constructor for objects of type Boulevard.
@@ -29,7 +29,7 @@ public class Boulevard extends Road {
      */
     @Override
     public String toString() {
-        return "Boulevard [name=" + getName() + ", direction=" + getDirection() + ", medianHasTrees=" + medianHasTrees
-                + "]";
+        return "Boulevard [name=" + getName() + ", direction=" + getDirection()
+                + ", medianHasTrees=" + medianHasTrees + "]";
     }
 }

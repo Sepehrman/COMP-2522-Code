@@ -8,6 +8,9 @@ package ca.bcit.comp2522.code.inheritance.introToInheritance.animalHierarchy;
  */
 public abstract class Bird extends Animal {
 
+    /**
+     * The bird's feather colour (this should be an enum!).
+     */
     protected String featherColour;
 
     /**
