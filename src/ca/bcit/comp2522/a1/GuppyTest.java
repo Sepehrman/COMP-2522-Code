@@ -363,14 +363,16 @@ class GuppyTest {
     @Test
     public void healthCoefficientMutatorAcceptsValidArguments() {
         double healthCoefficient = testGuppy.getHealthCoefficient();
-        testGuppy.setHealthCoefficient(0.0);
-        assertEquals(0.0, testGuppy.getHealthCoefficient(), 0.0);
 
         testGuppy.setHealthCoefficient(1.0);
         assertEquals(1.0, testGuppy.getHealthCoefficient(), 0.0);
 
         testGuppy.setHealthCoefficient(0.5);
         assertEquals(0.5, testGuppy.getHealthCoefficient(), 0.0);
+
+        /* Thanks Kyrill for finding this bug in our test! */
+        testGuppy.setHealthCoefficient(0.0);
+        assertEquals(0.0, testGuppy.getHealthCoefficient(), 0.0);
     }
 
     @Test
