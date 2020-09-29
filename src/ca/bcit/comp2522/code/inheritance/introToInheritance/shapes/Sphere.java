@@ -16,6 +16,7 @@ public class Sphere extends Shape {
      * @param radius a positive double
      */
     public Sphere(double radius) {
+        super("Sphere");
         if (radius > 0) {
             this.radius = radius;
         } else {

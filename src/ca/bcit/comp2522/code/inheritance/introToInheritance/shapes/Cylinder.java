@@ -18,7 +18,7 @@ public class Cylinder extends Shape {
      * @param height a positive double
      */
     public Cylinder(double radius, double height) {
-        super();
+        super("Cylinder");
         if (radius > 0) {
             this.radius = radius;
         } else {

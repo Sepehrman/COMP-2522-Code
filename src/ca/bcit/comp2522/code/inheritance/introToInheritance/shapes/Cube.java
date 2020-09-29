@@ -16,6 +16,7 @@ public class Cube extends Shape {
      * @param sideLength a double
      */
     public Cube(double sideLength) {
+        super("Cube");
         if (sideLength > 0) {
             this.sideLength = sideLength;
         } else {
