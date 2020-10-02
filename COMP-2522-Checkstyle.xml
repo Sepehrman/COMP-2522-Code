@@ -379,7 +379,7 @@
              "Override" or "java.lang.Override" annotation are skipped from validation
              as current class cannot change signature of these methods. -->
         <module name="ThrowsCount">
-            <property name="max" value="3"/>
+            <property name="max" value="4"/>
         </module>
 
         <!-- Checks that the parts of a class, record, or interface declaration appear

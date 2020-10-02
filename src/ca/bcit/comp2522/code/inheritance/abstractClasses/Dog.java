@@ -13,12 +13,15 @@ package ca.bcit.comp2522.code.inheritance.abstractClasses;
  */
 public abstract class Dog {
 
+    /**
+     * Stores the Dog's name as a String.
+     */
     protected final String name;
 
     /**
      * Constructs an object of type Dog.
      *
-     * @param name cannot be null or only whitespace
+     * @param name a String that cannot be null or only whitespace
      */
     public Dog(String name) {
         if (name != null && name.trim().length() > 0) {
