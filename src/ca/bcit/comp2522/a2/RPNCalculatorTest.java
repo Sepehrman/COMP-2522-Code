@@ -1,10 +1,8 @@
-package ca.bcit.comp2522.code.assignments;
+package ca.bcit.comp2522.a2;
 
-import ca.bcit.comp2522.a2.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * Tests the RPNCalculator class.
