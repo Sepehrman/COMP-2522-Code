@@ -99,7 +99,7 @@ public class RPNCalculatorTest {
 
     @Test
     public void processFormulaRejectsEmptyArgument() {
-        Assertions.assertThrows(StackUnderflowException.class,
+        Assertions.assertThrows(IllegalArgumentException.class,
                 () -> {
                     calculator = new RPNCalculator(2);
                     calculator.processFormula("");
