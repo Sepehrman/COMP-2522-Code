@@ -22,7 +22,7 @@ public class ChickenEgg {
      */
     public static void main(String[] args) {
         ChickenEgg e = new ChickenEgg();
-        e.y.setI(5);
+        //e.y.setI(5);
         System.out.println("i=" + e.i);
     }
 }

@@ -28,6 +28,7 @@ public class MockingExampleTest {
 
         // doReturn(0).when(fakeRandom).nextInt(6);
         when(fakeRandom.nextInt(6)).thenReturn(1).thenReturn(2).thenReturn(3);
+
         assertEquals(9, MockingExample.rollDie(fakeRandom, 3, 6));
     }
 
