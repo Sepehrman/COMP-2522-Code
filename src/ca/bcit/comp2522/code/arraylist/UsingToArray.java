@@ -10,13 +10,13 @@ import java.util.LinkedList;
  * @author BCIT
  * @version 2020
  */
-public class UsingToArray {
+public final class UsingToArray {
 
     /**
      * Constructs an object of type UsingToArray.
      */
     public UsingToArray() {
-        String colors[] = {"black", "blue", "yellow"};
+        String[] colors = {"black", "blue", "yellow"};
 
         final LinkedList<String> links = new LinkedList<String>(Arrays.asList(colors));
         links.addLast("red"); // add as last item
@@ -27,8 +27,10 @@ public class UsingToArray {
         colors = links.toArray(new String[links.size()]);
 
         System.out.println("colors: ");
-        for (String color : colors)
+        for (String color : colors) {
             System.out.println(color);
+        }
+
     }
 
     /**
@@ -36,7 +38,7 @@ public class UsingToArray {
      *
      * @param args command line arguments (unused)
      */
-    public static void main(String args[]) {
+    public static void main(final String[] args) {
         new UsingToArray();
     }
 }

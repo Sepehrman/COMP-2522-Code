@@ -1,63 +1,140 @@
 package ca.bcit.comp2522.code.innerClasses;
 
+/**
+ * A service implements jobs.
+ */
 interface Service {
-    void method1();
 
-    void method2();
+    /**
+     * Performs the first job.
+     */
+    void firstJob();
+
+    /**
+     * Performs the second job.
+     */
+    void secondJob();
 }
 
+/**
+ * A ServiceFactory produces a Service.
+ */
 interface ServiceFactory {
+
+    /**
+     * Returns a Service.
+     * @return service an implementation of the Service interface
+     */
     Service getService();
 }
 
-class Implementation1 implements Service {
-    private Implementation1() {
-    }
+/**
+ * PrintingService is an implementation of the Service interface.
+ */
+final class PrintingService implements Service {
 
-    public void method1() {
-        System.out.println("Implementation1 method1");
-    }
+    /**
+     * Check this out. It's a public static variable. Static means it's always available
+     * even before a PrintingService is instantiated. This is an anonymous ServiceFactory
+     * object.
+     */
+    public static ServiceFactory printingServiceFactory = new ServiceFactory() {
 
-    public void method2() {
-    	System.out.println("Implementation1 method2");
-    }
-
-    public static ServiceFactory factory = new ServiceFactory() {
+        /**
+         * Returns an instance of the PrintingService.
+         * @return printingService an instance of PrintingService.
+         */
         public Service getService() {
-            return new Implementation1();
+            return new PrintingService();
         }
     };
+
+    private PrintingService() {
+    }
+
+    /**
+     * Performs the first job.
+     */
+    public void firstJob() {
+        System.out.println("Printing the colour version!");
+    }
+
+    /**
+     * Performs the second job.
+     */
+    public void secondJob() {
+        System.out.println("Printing the B&W version!");
+    }
 }
 
-class Implementation2 implements Service {
-    private Implementation2() {
-    }
+/**
+ * CookingService is an implementation of the Service interface.
+ */
+final class CookingService implements Service {
 
-    public void method1() {
-    	System.out.println("Implementation2 method1");
-    }
+    /**
+     * Check this out. It's a public static variable. Static means it's always available
+     * even before a PrintingService is instantiated. This is an anonymous ServiceFactory
+     * object.
+     */
+    public static ServiceFactory cookingServiceFactory = new ServiceFactory() {
 
-    public void method2() {
-    	System.out.println("Implementation2 method2");
-    }
-
-    public static ServiceFactory factory = new ServiceFactory() {
+        /**
+         * Returns an instance of the CookingService.
+         * @return cookingService an instance of CookingService.
+         */
         public Service getService() {
-            return new Implementation2();
+            return new CookingService();
         }
     };
-}
 
-public class Factories {
-    public static void serviceConsumer(ServiceFactory fact) {
-        Service s = fact.getService();
-        s.method1();
-        s.method2();
+    private CookingService() {
     }
 
-    public static void main(String[] args) {
-        serviceConsumer(Implementation1.factory);
+    /**
+     * Performs the first job.
+     */
+    public void firstJob() {
+        System.out.println("Whipping up some jjapaguri!");
+    }
+
+    /**
+     * Performs the second job.
+     */
+    public void secondJob() {
+        System.out.println("Roasting some curried kabocha!");
+    }
+}
+
+/**
+ * Shows us how to use abstract factories. This is a very cool design pattern.
+ *
+ * @author BCIT
+ * @version 2020
+ */
+public final class Factories {
+
+    private Factories() {
+    }
+
+    /**
+     * A service consumer accepts a factory as a parameter, extracts a
+     * service from the factory, and then asks the service to act.
+     * @param serviceFactory an implementation of ServiceFactory
+     */
+    public static void serviceConsumer(final ServiceFactory serviceFactory) {
+        Service s = serviceFactory.getService();
+        s.firstJob();
+        s.secondJob();
+    }
+
+    /**
+     * Drives the program.
+     * @param args unused.
+     */
+    public static void main(final String[] args) {
+        serviceConsumer(PrintingService.printingServiceFactory);
         // Implementations are completely interchangeable:
-        serviceConsumer(Implementation2.factory);
+        serviceConsumer(CookingService.cookingServiceFactory);
     }
 }

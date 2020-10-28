@@ -8,7 +8,11 @@ import java.util.Random;
  * @author BCIT
  * @version 2020
  */
-public class MockingExample {
+public final class MockingExample {
+
+    private MockingExample() {
+
+    }
 
     /**
      * Rolls a die with the specified number of side the specified number of times.
@@ -18,7 +22,7 @@ public class MockingExample {
      * @param sides an int
      * @return sum the total of the dice roll(s)
      */
-    public static int rollDie(Random random, int rolls, int sides) {
+    public static int rollDie(final Random random, final int rolls, final int sides) {
         int sum = 0;
         for (int i = 0; i < rolls; ++i) {
             int roll = random.nextInt(sides);
@@ -34,7 +38,7 @@ public class MockingExample {
      * @param sides an int
      * @return sum the total of the dice roll(s)
      */
-    public static int rollDie(int rolls, int sides) {
+    public static int rollDie(final int rolls, final int sides) {
         Random random = new Random();
         int sum = 0;
         for (int i = 0; i < rolls; ++i) {
@@ -49,7 +53,7 @@ public class MockingExample {
      * Drives the program.
      * @param args unused
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         final Random random = new Random();
         final int roll = rollDie(random, 3, 6);
         System.out.println(roll);

@@ -10,13 +10,17 @@ import java.util.List;
  * @author BCIT
  * @version 2020
  */
-public class GratefulDead {
+public final class GratefulDead {
+
+    private GratefulDead() {
+    }
+
     /**
      * Stores and modifies a list of band members.
      *
      * @param args Unused
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         final List<String> band = new ArrayList<String>();
 
         band.add("Jerry Garcia");

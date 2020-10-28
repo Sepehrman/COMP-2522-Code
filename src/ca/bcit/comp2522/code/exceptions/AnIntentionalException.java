@@ -7,14 +7,18 @@ package ca.bcit.comp2522.code.exceptions;
  * @author BCIT
  * @version 2020
  */
-public class AnIntentionalException {
+public final class AnIntentionalException {
+
+    private AnIntentionalException() {
+
+    }
 
     /**
      * Deliberately divides by zero to produce an exception.
      *
      * @param args command line arguments (unused)
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         final int numerator = 10;
         final int denominator = 0;
 

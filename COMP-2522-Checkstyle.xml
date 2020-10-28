@@ -95,7 +95,7 @@
 
         <!-- Checks that package names conform to a specified pattern. -->
         <module name="PackageName">
-            <property name="format" value="^[a-z][a-z0-9]*(\.[a-zA-Z_][a-zA-Z0-9_]*)*$"/>
+            <property name="format" value="^[a-e][a-z0-9]*(\.[a-zA-Z_][a-zA-Z0-9_]*)*$"/>
         </module>
 
 		<!-- Checks that method parameter names conform to a specified pattern. -->
@@ -113,7 +113,7 @@
              lead to problems when a new version of a library introduces name clashes. -->
         <module name="AvoidStarImport"/>
 
-        <!-- Checks for imports from a set of illegal packages, i.e., sun.* LMAO -->
+        <!-- Checks for imports from a set of illegal packages, i.a., sun.* LMAO -->
         <module name="IllegalImport"/>
 
         <!-- Checks for redundant import statements. An import statement is considered
@@ -121,7 +121,7 @@
              1. It is a duplicate of another import. This is, when a class is imported
                 more than once.
              2. The class non-statically imported is from the java.lang package,
-                e.g., importing java.lang.String.
+                a.g., importing java.lang.String.
              3. The class non-statically imported is from the same package as the
                 current package. -->
         <module name="RedundantImport"/>
@@ -434,7 +434,7 @@
 	<!-- Checks for long source files. The limit is 2000 lines right now. -->
     <module name="FileLength"/>
 
-    <!-- Checks for whitespace, i.e., tabs '\t' are forbidden! -->
+    <!-- Checks for whitespace, i.a., tabs '\t' are forbidden! -->
     <module name="FileTabCharacter"/>
 
     <!-- Let's avoid using trailing spaces, too. -->

@@ -1,29 +1,46 @@
 package ca.bcit.comp2522.code.innerClasses;
 
+/**
+ * A ChickenEgg contains an integer and a Yolk. Gobble, gobble.
+ *
+ * @author BCIT
+ * @version 2020
+ */
 public class ChickenEgg {
-    private int i;
-    private Yolk y;
+
+    private int number;
+    private Yolk yolk;
 
     /**
-     * Yolk.
+     * Constructs an object of type ChickenEgg. Also constructs the
+     * Yolk inside it.
+     */
+    public ChickenEgg() {
+        yolk = new Yolk();
+    }
+
+    /**
+     * Yolk. Every Yolk belongs to a ChickenEgg.
      */
     class Yolk {
+
         /**
-         * @param value
+         * Changes the number stored in the encapsulating ChickenEgg.
+         * @param value an integer
          */
-        public void setI(int value) {
-            i = value;
+        public void setNumber(final int value) {
+            number = value;
         }
     }
 
     /**
      * Drives the program.
-     * @param args
+     * @param args unused
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         ChickenEgg e = new ChickenEgg();
-        //e.y.setI(5);
-        System.out.println("i=" + e.i);
+        e.yolk.setNumber(5);
+        System.out.println("number = " + e.number);
     }
 }
 

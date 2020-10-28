@@ -9,14 +9,18 @@ import java.util.ArrayList;
  * @author BCIT
  * @version 2020
  */
-public class Beatles {
+public final class Beatles {
+
+    private Beatles() {
+
+    }
 
     /**
      * Stores and modifies a list of band members.
      *
      * @param args command line arguments (unused)
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         final ArrayList<String> band = new ArrayList<>();
 
         band.add("Paul");

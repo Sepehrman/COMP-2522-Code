@@ -1,28 +1,64 @@
 package ca.bcit.comp2522.code.innerClasses;
 
+/**
+ * An ordinary class doing ordinary things.
+ */
 class D {
 }
 
-abstract class E {
+/**
+ * An ordinary abstract class doing nothing because it's abstract.
+ */
+abstract class A {
 }
 
-class Z extends D {
-    E makeE() {
-        return new E() {
+/**
+ * An ordinary subclass that extends an ordinary class.
+ */
+class E extends D {
+
+    /**
+     * Returns an instance of the abstract class.
+     * @return a an A.
+     */
+    A makeA() {
+        return new A() {
         };
     }
 }
 
-public class MultiImplementation {
-    static void takesD(D d) {
+/**
+ * Demonstrates some neat stuff.
+ *
+ * @author BCIT
+ * @version 2020
+ */
+public final class MultiImplementation {
+
+    private MultiImplementation() {
     }
 
-    static void takesE(E e) {
+    /**
+     * This method accepts a D.
+     * @param d a D
+     */
+    static void takesD(final D d) {
     }
 
-    public static void main(String[] args) {
-        Z z = new Z();
-        takesD(z);
-        takesE(z.makeE());
+    /**
+     * This method accepts an A.
+     * @param a an A
+     */
+    static void takesA(final A a) {
+    }
+
+    /**
+     * Drives the program.
+     * @param args unused
+     */
+    public static void main(final String[] args) {
+        E e = new E();
+        takesD(e);
+        takesA(e.makeA());
     }
 }
