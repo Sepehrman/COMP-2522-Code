@@ -1,12 +1,12 @@
 package ca.bcit.comp2522.code.innerClasses;
 
 /**
- * Let's see how to create and use anonymous classes.
+ * Let's see how to create and use local classes.
  *
  * @author BCIT
  * @version 2020
  */
-public class HelloWorldAnonymousClasses {
+public class HelloWorldLocalClasses {
 
     /**
      * This class contains a nested private interface. The interface can be used
@@ -22,7 +22,7 @@ public class HelloWorldAnonymousClasses {
      */
     public void sayHello() {
 
-        /* An anonymous class is defined and assigned to a variable.
+        /* A local class is defined and assigned to a variable.
            It is an implementation of the HelloWorld interface. */
         class EnglishGreeting implements HelloWorld {
             String name = "world";
@@ -39,7 +39,7 @@ public class HelloWorldAnonymousClasses {
 
         HelloWorld englishGreeting = new EnglishGreeting();
 
-        /* An anonymous class is defined and assigned to a variable.
+        /* A local class is defined and assigned to a variable.
            It is an implementation of the HelloWorld interface. */
         HelloWorld frenchGreeting = new HelloWorld() {
             String name = "tout le monde";
@@ -54,7 +54,7 @@ public class HelloWorldAnonymousClasses {
             }
         };
 
-        /* An anonymous class is defined and assigned to a variable.
+        /* A local class is defined and assigned to a variable.
            It is an implementation of the HelloWorld interface. */
         HelloWorld spanishGreeting = new HelloWorld() {
             String name = "mundo";
@@ -81,7 +81,7 @@ public class HelloWorldAnonymousClasses {
      * @param args unused
      */
     public static void main(final String... args) {
-        HelloWorldAnonymousClasses myApp = new HelloWorldAnonymousClasses();
+        HelloWorldLocalClasses myApp = new HelloWorldLocalClasses();
         myApp.sayHello();
     }
 }
