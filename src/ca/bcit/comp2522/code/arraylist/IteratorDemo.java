@@ -39,7 +39,7 @@ public class IteratorDemo {
         System.out.println("\n\nArrayList after calling removeColors: ");
         removeColors(list, removeList);
         for (String color : list) {
-            System.out.printf("%s "
+            System.out.printf("%s ", color);
         }
     }
 
@@ -62,7 +62,7 @@ public class IteratorDemo {
      *
      * @param args command line arguments (unused)
      */
-    public static void main(final String args[]) {
+    public static void main(final String[] args) {
         new IteratorDemo();
     }
 }
