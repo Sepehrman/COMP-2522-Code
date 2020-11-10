@@ -3,7 +3,7 @@ package ca.bcit.comp2522.code.dataStructures.map.dice;
 import java.util.Random;
 
 /**
- * Die.
+ * Die.  This die has 6 sides.
  *
  * @author BCIT
  * @version 2020

@@ -23,7 +23,7 @@ public class MagazineList {
 
     /**
      * Adds the specified Magazine to this MagazineList. Creates a new
-     * MagazineNode object and adds it to the end of the linked list
+     * MagazineNode object and adds it to the end of the linked list.
      *
      * @param mag The magazine to add.
      */
@@ -66,7 +66,7 @@ public class MagazineList {
      *
      * @author Lewis & Loftus 9e
      * @author BCIT
-     * @version 2019
+     * @version 2020
      */
     private class MagazineNode {
 
