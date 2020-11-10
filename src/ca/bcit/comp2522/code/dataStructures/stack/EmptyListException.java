@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.code.stack;
+package ca.bcit.comp2522.code.dataStructures.stack;
 
 /**
  * EmptyListException is an unchecked exception (it extends

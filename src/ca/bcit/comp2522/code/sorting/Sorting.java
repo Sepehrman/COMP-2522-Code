@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.code.searchAndSort;
+package ca.bcit.comp2522.code.sorting;
 
 /**
  * Demonstrates the selection sort and insertion sort algorithms.

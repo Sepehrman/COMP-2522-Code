@@ -1,14 +1,14 @@
-package ca.bcit.comp2522.code.stack;
+package ca.bcit.comp2522.code.dataStructures.stack;
 
 /**
- * StackInheritanceTest.
+ * StackCompositionTest.
  *
  * @author BCIT
  * @version 2019
  */
-public final class StackInheritanceDemo {
+public final class StackCompositionDemo {
 
-    private StackInheritanceDemo() {
+    private StackCompositionDemo() {
     }
 
     /**
@@ -18,7 +18,7 @@ public final class StackInheritanceDemo {
      */
     public static void main(final String[] args) {
 
-        StackInheritance stack = new StackInheritance();
+        StackComposition stack = new StackComposition();
         stack.push(-1);
         stack.print();
         stack.push(0);

@@ -1,4 +1,4 @@
-package ca.bcit.comp2522.code.searchAndSort;
+package ca.bcit.comp2522.code.sorting;
 
 import java.util.Random;
 import java.util.Scanner;
